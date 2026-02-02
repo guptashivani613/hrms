@@ -1,0 +1,30 @@
+import React, { useEffect } from "react";
+
+const ErrorMessage = ({ message, onClose }) => {
+  useEffect(() => {
+    if (message) {
+      const timer = setTimeout(() => {
+        onClose();
+      }, 5000); 
+
+      return () => clearTimeout(timer);
+    }
+  }, [message, onClose]);
+
+  if (!message) return null;
+
+  return (
+    <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 transition-opacity duration-300 rounded relative mb-4" role="alert">
+      <span className="block sm:inline">{message}</span>
+        <button
+          onClick={onClose}
+          className="absolute top-0 bottom-0 right-0 px-4 py-3"
+        >
+          <span className="text-xl font-bold">&times;</span>
+        </button>
+    </div>
+  );
+};
+
+export default ErrorMessage;
+

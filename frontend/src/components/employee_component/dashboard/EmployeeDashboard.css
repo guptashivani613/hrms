@@ -1,0 +1,161 @@
+/* General Dashboard Styles */
+.dashboard-container {
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f7fb;
+  min-height: 100vh;
+}
+
+.dashboard-heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: #4A4A4A;
+  margin-bottom: 40px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+/* Card Styling */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+  width: 230px;
+  transition: transform 0.2s, background-color 0.2s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee;
+  gap: 10px; /* Space between text and icon */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background-color: #fafafa;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  font-size: 30px;
+  color: #4A90E2;
+}
+
+/* Active Card Styles */
+.card.active {
+  background-color: #4A90E2;
+  color: #fff;
+  border: 1px solid #4A90E2;
+}
+
+.card.active .card-icon {
+  color: #fff;
+}
+
+/* Additional Card Hover Effects */
+.card.active:hover {
+  background-color: #357ABD;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.content-container {
+  padding: 25px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.info-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.info-label {
+  font-weight: 500;
+  color: #555;
+}
+
+.info-value {
+  font-weight: 600;
+  color: #333;
+}
+
+.salary-section .info-box,
+.holidays-section .holiday-item {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.holidays-list {
+  list-style: none;
+  padding: 0;
+}
+
+.holiday-item {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.holiday-item:hover {
+  color: #4A90E2;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .content-container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-heading {
+    font-size: 22px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .card-icon {
+    font-size: 25px;
+  }
+
+  .content-container {
+    padding: 15px;
+  }
+}
